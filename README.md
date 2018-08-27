@@ -17,10 +17,10 @@ The modules:
 - FC.f90         module for feature construction
 
 
-How to use:
+Running SISSO:
 -------------
 Input Files: "SISSO.in" and "train.dat"
-(see folder "input_template" for templates; as a toy example, just run SISSO with the templates without any changes)
+(see folder "input_template" for the templates; As a toy example, just run SISSO with the templates without any changes)
 
 Output:
 - File SISSO.out: all the information regarding parameter setting, feature space, and the best descriptors/models
