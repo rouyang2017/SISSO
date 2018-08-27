@@ -7,8 +7,8 @@ R. Ouyang, S. Curtarolo, E. Ahmetcik, M. Scheffler, and L. M. Ghiringhelli, Phys
 
 Installation:
 -------------
-Go to folder 'src' and do: mpiifort var_global.f90 libsisso.f90 DI.f90 FC.f90 SISSO.f90 -o ~/bin/your_code_name
-(Currently, only Intel compilers are acceptable)
+This program is written in Fortran 90, and a MPI Fortran compiler is needed for the installation (Intel compiler for the moment).
+E.g.: go to folder "src" and do "mpiifort var_global.f90 libsisso.f90 DI.f90 FC.f90 SISSO.f90 -o ~/bin/your_code_name"
 
 Modules:
 - var_global.f90 module for declaring global variables
