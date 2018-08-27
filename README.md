@@ -33,5 +33,5 @@ Output:
 About:
 -------------
 Created and maintained by Runhai Ouyang (Fritz Haber Institute of the Max Planck Society, Berlin, Germany).
-Feel free to contact Runhai Ouyang in case of any problems/comments/suggestions in using the code.
+Please feel free to contact Runhai Ouyang in case of any problems/comments/suggestions in using the code.
 (ouyang@fhi-berlin.mpg.de)
