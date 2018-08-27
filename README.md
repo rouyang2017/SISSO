@@ -12,7 +12,7 @@ Go to folder 'src' and do: mpiifort var_global.f90 libsisso.f90 DI.f90 FC.f90 SI
 
 Modules:
 - var_global.f90 module for declaring global variables
-- libsisso.f90   module of mathematical functions
+- libsisso.f90   module for mathematical functions
 - DI.f90         module for descriptor identification
 - FC.f90         module for feature construction
 
