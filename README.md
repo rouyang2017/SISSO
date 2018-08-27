@@ -10,7 +10,7 @@ Installation:
 This program is written in Fortran 90, and a MPI Fortran compiler is needed for the installation (Intel compiler for the moment).
 E.g.: go to folder "src" and do "mpiifort var_global.f90 libsisso.f90 DI.f90 FC.f90 SISSO.f90 -o ~/bin/your_code_name"
 
-Modules:
+The modules:
 - var_global.f90 module for declaring global variables
 - libsisso.f90   module for mathematical functions
 - DI.f90         module for descriptor identification
