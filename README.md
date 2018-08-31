@@ -25,7 +25,7 @@ Running SISSO
 -------------
 Input Files: "SISSO.in" and "train.dat"
 (see folder "input_template" for the templates; As a toy example, just run SISSO with the templates without any changes).
-Please read the paper Phys. Rev. Mater. 2, 083802 (2018) for more method details.
+Please read the paper Phys. Rev. Mater. 2, 083802 (2018) for the method and algorithm details.
 
 Output:
 - File SISSO.out: all the information regarding parameter setting, feature space, and the best descriptors/models
