@@ -5,10 +5,14 @@ If you are using this software, please cite
 R. Ouyang, S. Curtarolo, E. Ahmetcik, M. Scheffler, and L. M. Ghiringhelli, Phys. Rev. Mater. 2, 083802 (2018).
 
 
-Installation:
+Installation
 -------------
-This program is written in Fortran 90, and a MPI Fortran compiler is needed for the installation (Intel compiler for the moment).
-E.g.: go to folder "src" and do "mpiifort var_global.f90 libsisso.f90 DI.f90 FC.f90 SISSO.f90 -o ~/bin/your_code_name"
+This program is written in Fortran 90, and a MPI Fortran compiler (from Intel or GNU) is needed for the installation.
+E.g.: go to the folder "src" and do:
+"mpiifort -O2 var_global.f90 libsisso.f90 DI.f90 FC.f90 SISSO.f90 -o ~/bin/your_code_name"
+or
+"mpigfortran -O2 var_global.f90 libsisso.f90 DI.f90 FC.f90 SISSO.f90 -o ~/bin/your_code_name"
+(The code compiled using mpiifort was found ~2X faster than that using mpigfortran according to my tests)
 
 The modules:
 - var_global.f90 module for declaring global variables
@@ -17,7 +21,7 @@ The modules:
 - FC.f90         module for feature construction
 
 
-Running SISSO:
+Running SISSO
 -------------
 Input Files: "SISSO.in" and "train.dat"
 (see folder "input_template" for the templates; As a toy example, just run SISSO with the templates without any changes)
@@ -30,7 +34,7 @@ Output:
 - Folder residual: residual data generated at each iteration
 
 
-About:
+About
 -------------
 Created and maintained by Runhai Ouyang (Fritz Haber Institute of the Max Planck Society, Berlin, Germany).
 Please feel free to contact Runhai Ouyang in case of any problems/comments/suggestions in using the code.
