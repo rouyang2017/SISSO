@@ -12,7 +12,7 @@ E.g.: go to the folder "src" and do:
 "mpiifort -O2 var_global.f90 libsisso.f90 DI.f90 FC.f90 SISSO.f90 -o ~/bin/your_code_name"
 or
 "mpigfortran -O2 var_global.f90 libsisso.f90 DI.f90 FC.f90 SISSO.f90 -o ~/bin/your_code_name"
-(The code compiled using mpiifort was found 1.5 ~ 2X faster than that using mpigfortran according to my tests)
+(The code compiled using mpiifort was found ~1.5X faster than that using mpigfortran according to my tests)
 
 The modules:
 - var_global.f90 module for declaring global variables
