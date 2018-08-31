@@ -1,11 +1,11 @@
 Changes of v2.3 compared to v2.2:
 
 1. Improvements on classification
-Some top ranked yet poor descriptors are excluded in classification. For example in the classification of two data group,
-if one domain with rectangular shape intersects another domain also in rectangular shape, then there is a non-zero overlap 
-area but could be no data points inside the overlap region. Such descriptors may be ranked at top positions because there 
-are no or very few data_in_overlap which is used as the first metric for model ranking. However, these descriptors are not 
-desired because there is actually big overlap between the two domains. Now in the version 2.3, such descriptors are supressed.
+Some top ranked yet poor descriptors are excluded. For example in the classification of two data group,
+if one domain with rectangular shape intersects another domain also with rectangular shape, then there is a non-zero overlap 
+area but could be without data points inside the overlap region. Such descriptors may be ranked at top positions because there 
+may be no or very few data_in_overlap which is used as the first metric for model ranking. These descriptors are not 
+desired because of the actual big overlap between domains. Now in the version 2.3, such descriptors are supressed.
 
 2. Compilation using GNU Fortran compilers enabled
 The code compiled using mpiifort was found ~2X faster than that using mpigfortran at the same optimization level -O2. 
