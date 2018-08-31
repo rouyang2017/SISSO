@@ -11,5 +11,5 @@ desired because of the actual big overlap between domains. Now in the version 2.
 The code compiled using Intel ifort was found ~2X faster than that using GNU gfortran at the same optimization level -O2. 
 Different compilers may lead to slightly different total feature spaces, e.g. due to numerical noise, and the difference is 
 basically on the unimportant features. Thus, the choice of compiler should make no changes on the SISSO results (best models), 
-yet for the reason of speed Intel compilers are recommended.
+as seen from my tests, yet for the reason of speed Intel compilers are recommended.
 
