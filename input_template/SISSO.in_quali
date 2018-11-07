@@ -32,3 +32,4 @@ fs_size_DI=          ! to be set by SISSO automatically if task='FCDI': feature-
 fs_size_L0=          ! to be set by SISSO automatically if (task='FCDI' and method ='L0'): size for L0
 metric='LS_RMSE'     ! for ptype='quanti'; metric for model selection: LS_RMSE,LS_MaxAE
 nm_output=100        ! number of the best models to output
+
