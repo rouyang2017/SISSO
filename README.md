@@ -1,3 +1,6 @@
+
+Version SISSO.2.3
+
 SISSO: A compressed-sensing method for identifying the best low-dimensional descriptor for material properties.
 This code is licensed under the Apache License, Version 2.0
 
