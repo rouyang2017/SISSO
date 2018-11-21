@@ -179,8 +179,8 @@ do iFCDI=icontinue,desc_dim
 end do
 
 if(mpirank==0) then
- write(*,'(/a)'), 'FCDI done !'
- write(9,'(/a)'), 'FCDI done !'
+ write(*,'(/a)') 'FCDI done !'
+ write(9,'(/a)') 'FCDI done !'
  call system('rm CONTINUE')
 end if
 
@@ -392,12 +392,13 @@ do while(.true.)
 !   read(line_para(i+1:),*,err=1001) CV_fold
 !   case('CV_repeat')
 !   read(line_para(i+1:),*,err=1001) CV_repeat
+   case('method')
+   read(line_para(i+1:),*,err=1001) method
    case('fs_size_DI')
    if(trim(adjustl(task))=='DI') read(line_para(i+1:),*,err=1001) fs_size_DI
    case('fs_size_L0')
-   if(trim(adjustl(task))=='DI') read(line_para(i+1:),*,err=1001) fs_size_L0
-   case('method')
-   read(line_para(i+1:),*,err=1001) method
+   if(trim(adjustl(task))=='DI' .or. (trim(adjustl(task))=='FCDI' .and. trim(adjustl(method))=='L1L0') ) &
+       read(line_para(i+1:),*,err=1001) fs_size_L0
 !--
    case('L1_max_iter')
    read(line_para(i+1:),*,err=1001) L1_max_iter

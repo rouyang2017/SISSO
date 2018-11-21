@@ -1051,7 +1051,7 @@ write(9,'(a)') '============================================='
 write(9,'(i3,a)') idimen,'D descriptor (model): '
 write(9,'(a,i10,a,f15.5)') 'Number of data in all overlap regions (the first metric):',int(mscore(1,1))
 write(9,'(a,f15.5)') 'Size of the overlap (the second metric):',mscore(1,2)
-write(9,'(a)') '(positive: size of overlap; negative: no overlap, with the absolute value being the (shortest) domain-domain distance)'
+write(9,'(a)') '(positive: overlap-size; negative: no overlap (the absolute value is the shortest distance between domains)'
 write(9,'(a,i10)') 'Actual number (without double counting) of data in all overlap regions: ', realn_ol
 write(9,'(a)')  '@@@descriptor: '
 do i=1,idimen
