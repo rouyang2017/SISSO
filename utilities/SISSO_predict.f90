@@ -188,7 +188,7 @@ do i=1,ns
      call system('echo "define abs(i){if(i<0) return (-i);return(i)} define exp(i){return(e(i))} define sin(i){return(s(i))} &
            define log(i){return(l(i))}  define cbrt(i){ if(i<0) return (-e(l(-i)/3)); if(i==0) return 0; return e(l(i)/3) } &
            define cos(i){return(c(i))}  define scd(i){ return (1.0/3.14159265/(1+i^2))} &
-            '//trim(adjustl(dparser(i)))//' " |bc -l >>desc_tmp')
+            '//trim(adjustl(dparser(i)))//' " |bc -l >>desc_tmp') 
 end do
 
 open (111,file='desc_tmp',status='old')
