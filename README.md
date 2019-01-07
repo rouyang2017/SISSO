@@ -5,7 +5,7 @@ SISSO: A compressed-sensing method for identifying the best low-dimensional desc
 This code is licensed under the Apache License, Version 2.0
 
 If you are using this software, please cite:  
-R. Ouyang, S. Curtarolo, E. Ahmetcik, M. Scheffler, and L. M. Ghiringhelli, Phys. Rev. Mater. 2, 083802 (2018). 
+R. Ouyang, S. Curtarolo, E. Ahmetcik, M. Scheffler, and L. M. Ghiringhelli, Phys. Rev. Mater. 2, 083802 (2018).  
 R. Ouyang, E. Ahmetcik, C. Carbogno, M. Scheffler, and L. M. Ghiringhelli, "Simultaneous Learning of Several Materials 
 Properties from Incomplete Databases with Multi-Task SISSO", submitted to J. Phys.: Mater. (2019) (Preprint: arXiv:1901.00948)
 
