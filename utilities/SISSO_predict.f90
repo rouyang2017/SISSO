@@ -170,9 +170,9 @@ do while(k<=len_trim(descname))
 
    if(maxlength>0) then
       do j=1,ns
-         write(dparser(j)(n+1:n+15),'(a,f13.5,a)') '(',af(j,imax),')'
+         write(dparser(j)(n+1:n+22),'(a,f20.10,a)') '(',af(j,imax),')'
       end do
-      n=n+15
+      n=n+22
       k=k+len_trim(adjustl(afname(imax)))
    end if
 
@@ -185,14 +185,15 @@ inquire(file='desc_tmp',exist=fexist)
 if(fexist) call system('rm desc_tmp')
 do i=1,ns
      call nospace(dparser(i))
-     call system('echo "define abs(i){if(i<0) return (-i);return(i)} define exp(i){return(e(i))} &
-           define log(i){return(l(i)) }  define cbrt(i) { if(i<0) return (-e(l(-i)/3)); if(i==0) return 0; return e(l(i)/3) } &
+     call system('echo "define abs(i){if(i<0) return (-i);return(i)} define exp(i){return(e(i))} define sin(i){return(s(i))} &
+           define log(i){return(l(i))}  define cbrt(i){ if(i<0) return (-e(l(-i)/3)); if(i==0) return 0; return e(l(i)/3) } &
+           define cos(i){return(c(i))}  define scd(i){ return (1.0/3.14159265/(1+i^2))} &
             '//trim(adjustl(dparser(i)))//' " |bc -l >>desc_tmp')
 end do
 
 open (111,file='desc_tmp',status='old')
 do i=1,ns
-    read(111,'(f15.5)') data_of_desc(i)
+    read(111,*) data_of_desc(i)
 end do
 close(111)
 call system('rm desc_tmp')
