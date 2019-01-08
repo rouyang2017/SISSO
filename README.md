@@ -11,6 +11,7 @@ Properties from Incomplete Databases with Multi-Task SISSO", submitted to J. Phy
 
 
 Please read the file Changelog for the update from previous to this new version. Please use the new input templates.
+---
 
 
 Installation
