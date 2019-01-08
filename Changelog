@@ -9,7 +9,7 @@ v2.4
 6. keyword 'nprop' renamed to 'ntask'
 7. values for the keyword 'metric' renamed from 'LS_RMSE' and 'LS_MaxAE' to 'RMSE' and 'MaxAE', respectively.
 8. 'roundoff error' problem fixed. SISSO involves writing (FC steps) and reading (DI steps) of features during 
-the run. In all the previous version, the precision of the output features data were set to only 5 significant 
+the run. In all the previous versions, the precision of the output features data were set to only 5 significant 
 figures, which is insufficient especially when features have large values, e.g. >10^5. Large roundoff error may 
 cause nonoptimal results. In this version, the precision of the output features data has been changed to 
 have 10 significant figures.
