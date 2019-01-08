@@ -1,0 +1,20 @@
+Usage:
+
+- SISSO_predict.f90: read descriptor formulas from SISSO.out, and make prediction on unknown materials.
+1. How to install: ifort SISSO_predict.f90 -o ~/bin SISSO_predict
+2. How to use: run 'SISSO_predict' at your working directory
+3. Needed input files: predict.dat (containing the test materials and features, 
+   with exactly the same format with train.dat); SISSO_predict_para (parameters for running this code; 
+   if this file is not present, the code will ask for input interactively).
+4. Output files: predict_X.out (descriptor coordinates of the test materials); predict_Y.out 
+   (predicted values of the target property of the test materials).
+5. Note: please make sure that no 'operator' name is used for the feature names. E.g.: if one feature is named 'a', 
+   then 'abs()' will be mistakenly translated as xxxbs(), where xxx is the value of 'a'.
+
+
+- SVM.py: find a SVM line for classification by using the descriptor from SISSO
+1. How to use: run 'python SVM.py >out' at your working directory
+2. Needed input files: train.dat (column1,sample-string; column2,target-label(1/-1); column3-m, 
+   component of the descriptor)
+3. Note: please check SVM.py and make changes wherever necessary for your application.
+

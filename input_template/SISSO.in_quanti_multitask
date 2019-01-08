@@ -1,0 +1,34 @@
+!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+! basic keywords
+!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+calc='FCDI'          !'FCDI': Feature Construction & Descriptor Identification; 'FC': one-off FC; 'DI': one-off DI
+restart=.false.      ! for 'FCDI' and when the file 'CONTINUE' is present
+desc_dim=2           ! dimension of the descriptor (<=3 for 'quali')
+ptype='quanti'       ! property type: 'quanti'(quantitative property),'quali'(qualitative property)
+ntask=2              ! number of tasks for multi-task learning ( >1 ). See the MT-SISSO paper for the definition of task
+task_weighting=1     ! for ntask>1. 1: no weighting (tasks treated equally) 2: weighted by #sample_task_i/total_sample.
+nsample=5,7          ! number of samples for each property (seperate the numbers by comma for ntask >1)
+
+!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+! keywords for feature construction and sure independence screening
+! implemented operators:(+)(-)(*)(/)(exp)(exp-)(^-1)(^2)(^3)(sqrt)(cbrt)(log)(|-|)(scd)(^6)(sin)(cos)
+! scd: standard Cauchy distribution
+!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+nsf= 3               ! number of scalar features (one number for each material)
+rung=2               ! rung (0,1,2,3) of the feature space to be constructed
+maxcomplexity=10     ! max feature complexity (number of operators in a feature)
+opset='(+)(-)(*)(/)(exp)(log)(^-1)(^2)(^3)(sqrt)(cbrt)(|-|)'  ! ONE operator set for feature transformation
+ndimtype=2           ! number of dimension type (or unit) of the primary features
+dimclass=(1:2)(3:3)  ! group features according to their dimension/unit; those not in any (): dimensionless
+maxfval_lb=1e-3      ! features having the max. abs. data value <maxfval_lb will not be selected
+maxfval_ub=1e5       ! features having the max. abs. data value >maxfval_ub will not be selected
+subs_sis=400         ! SIS-selected (single) subspace size
+
+!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+! keywords for descriptor identification via a sparsifying operator
+!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+method='L0'          ! sparsification operator: 'L1L0' or 'L0'
+fs_size_DI=          ! to be set by SISSO automatically if calc='FCDI': feature-space size for DI
+fs_size_L0=          ! to be set by SISSO automatically if (calc='FCDI' and method ='L0'): size for L0
+metric='RMSE'        ! for ptype='quanti'; metric for model selection: RMSE,MaxAE
+nm_output=100        ! number of the best models to output
