@@ -10,7 +10,7 @@ R. Ouyang, E. Ahmetcik, C. Carbogno, M. Scheffler, and L. M. Ghiringhelli, "Simu
 Properties from Incomplete Databases with Multi-Task SISSO", submitted to J. Phys.: Mater. (2019) (Preprint: arXiv:1901.00948)
 
 
-Please read the file Changelog for the update from previous to this new version. Please use the new input templates.
+Please read the file Changelog for the updates from previous to this new version. Please use the new input templates.
 
 
 Installation
