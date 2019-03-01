@@ -50,7 +50,6 @@ Output:
 
 About
 -------------
-Created and maintained by Runhai Ouyang (Fritz Haber Institute of the Max Planck Society, Berlin, Germany).
-Please feel free to contact Runhai Ouyang (ouyang@fhi-berlin.mpg.de) or open issues in the Github in case of any problems/comments/suggestions in using the code.
+SISSO was created at FHI by Runhai Ouyang who moved to Shanghai University in 2019. Please feel free to contact Runhai Ouyang (rouyang@shu.edu.cn) or open issues in the Github in case of any problems/comments/suggestions in using the code.
 
 
