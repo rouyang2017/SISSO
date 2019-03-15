@@ -49,6 +49,6 @@ Output:
 
 About
 -------------
-SISSO was created at FHI by Runhai Ouyang who moved to Shanghai University in 2019. Please feel free to contact Runhai Ouyang (rouyang@shu.edu.cn) or open issues in the Github in case of any problems/comments/suggestions in using the code.
+The SISSO code was created at FHI by Runhai Ouyang who moved to Shanghai University in 2019. Please feel free to contact Runhai Ouyang (rouyang@shu.edu.cn) or open issues in the Github in case of any problems/comments/suggestions in using the code.
 
 
