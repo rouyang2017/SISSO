@@ -6,7 +6,7 @@ References:
 R. Ouyang, S. Curtarolo, E. Ahmetcik, M. Scheffler, and L. M. Ghiringhelli, Phys. Rev. Mater. 2, 083802 (2018).  
 R. Ouyang, E. Ahmetcik, C. Carbogno, M. Scheffler, and L. M. Ghiringhelli, J. Phys.: Mater. 2, 024002 (2019).
 
-Please use corresponding input templates when switching to a new version.  
+Please use the corresponding new input templates when switch to this version.  
 See the wiki page for the list of published works using SISSO for materials discovery.
 
 
