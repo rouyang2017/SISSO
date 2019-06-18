@@ -2,7 +2,7 @@
 Version SISSO.3.0, June, 2019.
 This code is licensed under the Apache License, Version 2.0
 
-References:
+References:  
 R. Ouyang, S. Curtarolo, E. Ahmetcik, M. Scheffler, and L. M. Ghiringhelli, Phys. Rev. Mater. 2, 083802 (2018).  
 R. Ouyang, E. Ahmetcik, C. Carbogno, M. Scheffler, and L. M. Ghiringhelli, J. Phys.: Mater. 2, 024002 (2019).
 
