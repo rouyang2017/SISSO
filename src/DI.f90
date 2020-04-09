@@ -121,7 +121,7 @@ if(mpirank==0) then
 !  end if
   
   do i=1,fs_size_DI
-  read(funit,'(a)') line
+  read(funit,*) line
   line=trim(adjustl(line))
   fname(i)=line(1:index(line,' '))
   end do
