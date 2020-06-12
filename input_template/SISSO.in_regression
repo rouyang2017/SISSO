@@ -1,0 +1,33 @@
+!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+! Keywords for the target properties
+!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ptype=1              ! property type 1: continuous for regression,2:categorical for classification
+ntask=1              ! number of tasks (properties or maps) 1: single-task learning, >1: multi-task learning
+nsample=5            ! number of samples. If ntask>1, input a number for each task seperated by comma
+task_weighting=1     ! 1: no weighting (tasks treated equally) 2: weighted by #sample_task_i/total_sample.a
+desc_dim=2           ! dimension of the descriptor
+restart=.false.      ! set .true. to continue an unfinished job
+
+!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+! Keywords for feature construction (FC) and sure independence screening (SIS)
+! FC recursively do H*Phi->Phi, where H: operators set, Phi: feature space. Number of repeat: rung of the Phi.
+! Implemented operators:(+)(-)(*)(/)(exp)(exp-)(^-1)(^2)(^3)(sqrt)(cbrt)(log)(|-|)(scd)(^6)(sin)(cos)
+! scd: standard Cauchy distribution
+!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+nsf= 3               ! number of input scalar features in the train.dat file
+rung=2               ! rung of the feature space to be constructed
+opset='(+)(-)...'    ! SAME one set of operators for recursive FC. Otherwise, input a set for each rung seperated by comma
+maxcomplexity=10     ! max feature complexity (number of operators in a feature)
+dimclass=(1:2)(3:3)  ! group features according to their dimension/unit; those not in any () are dimensionless
+maxfval_lb=1e-3      ! features having the max. abs. data value <maxfval_lb will not be selected
+maxfval_ub=1e5       ! features having the max. abs. data value >maxfval_ub will not be selected
+subs_sis=20          ! SAME one size for every SIS-selected subspace. Otherwise,input a size for each dimension seperated by comma
+
+!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+! keywords for descriptor identification via a sparsifying operator
+!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+method='L0'          ! sparsification operator: 'L1L0' or 'L0'; L0 is recommended!
+L1L0_size4L0= 1      ! If method='L1L0', specify the number of features to be screened by L1 for L0
+fit_intercept=.true. ! fit to a nonzero intercept (.true.) or force the intercept to zero (.false.)
+metric='RMSE'        ! for regression only, the metric for model selection: RMSE,MaxAE
+nm_output=100        ! number of the best models to output

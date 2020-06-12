@@ -1,0 +1,32 @@
+!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+! Keywords for the target properties
+!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ptype=2              ! property type 1: continuous for regression,2:categorical for classification
+ntask=1              ! number of tasks (properties or maps) 1: single-task learning, >1: multi-task learning
+nsample=(2,3)        ! (#data in group1,#data in group2,...). If ntask>1, seperate the brackets(tasks) by comma
+desc_dim=2           ! dimension of the descriptor (<=3 for classification,3 is not stable)
+restart=.false.      ! set .true. to continue an unfinished job
+
+!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+! Keywords for feature construction (FC) and sure independence screening (SIS)
+! FC recursively do H*Phi->Phi, where H: operators set, Phi: feature space. Number of repeat: rung of the Phi.
+! Implemented operators:(+)(-)(*)(/)(exp)(exp-)(^-1)(^2)(^3)(sqrt)(cbrt)(log)(|-|)(scd)(^6)(sin)(cos)
+! scd: standard Cauchy distribution
+!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+nsf= 3               ! number of input scalar features in the train.dat file
+rung=2               ! rung of the feature space to be constructed
+opset='(+)(-)...'    ! SAME one set of operators for recursive FC. Otherwise, input a set for each rung seperated by comma
+maxcomplexity=10     ! max feature complexity (number of operators in a feature)
+dimclass=(1:2)(3:3)  ! group features according to their dimension/unit; those not in any () are dimensionless
+maxfval_lb=1e-3      ! features having the max. abs. data value <maxfval_lb will not be selected
+maxfval_ub=1e5       ! features having the max. abs. data value >maxfval_ub will not be selected
+subs_sis=20          ! SAME one size for every SIS-selected subspace. Otherwise,input a size for each dimension seperated by comma
+
+!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+! Keywords for descriptor identification via a sparsifying operator
+!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+method='L0'          ! sparsification method: L0
+isconvex=(1,1)       ! are the domains convex ? 1: YES; 0: NO
+width=0.001          ! boundary tolerance for classification (count in outside points very close to the domain)
+nm_output=100        ! the best candidate models to output
+
