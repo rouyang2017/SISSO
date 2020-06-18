@@ -12,11 +12,10 @@ See the wiki page for the list of publications with SISSO for materials discover
 
 Installation
 -------------
-A MPI Fortran compiler is needed for the compilation. For example, go to the folder "src" and do
-
-1).  mpiifort -fp-model precise var_global.f90 libsisso.f90 DI.f90 FC.f90 SISSO.f90 -o ~/bin/your_code_name
-or
-2).  mpiifort -O2 var_global.f90 libsisso.f90 DI.f90 FC.f90 SISSO.f90 -o ~/bin/your_code_name
+A MPI Fortran compiler is needed for the compilation. For example, go to the folder "src" and do  
+1).  mpiifort -fp-model precise var_global.f90 libsisso.f90 DI.f90 FC.f90 SISSO.f90 -o ~/bin/your_code_name  
+or  
+2).  mpiifort -O2 var_global.f90 libsisso.f90 DI.f90 FC.f90 SISSO.f90 -o ~/bin/your_code_name  
   
 Note:
 - option 1) enables better accuracy and run-to-run reproducibility of floating-point calculations; option 2) makes 
