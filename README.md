@@ -12,13 +12,19 @@ See the wiki page for the list of publications with SISSO for materials discover
 
 Installation
 -------------
-This program is written in Fortran 90. A MPI Fortran compiler is needed for the installation.
-For example, go to the folder "src" and do:
-"mpiifort -O2 var_global.f90 libsisso.f90 DI.f90 FC.f90 SISSO.f90 -o ~/bin/your_code_name"
+A MPI Fortran compiler is needed for the compilation. For example, go to the folder "src" and do
 
-Note: if 'mpi' related errors present during the compilation, please open the file 'var_global.f90' and replace
-the line " use mpi " with " include 'mpif.h' ". However, " use mpi " is strongly encouraged  
-(https://www.mpi-forum.org/docs/mpi-3.1/mpi31-report/node411.htm).
+1).  mpiifort -fp-model precise var_global.f90 libsisso.f90 DI.f90 FC.f90 SISSO.f90 -o ~/bin/your_code_name
+or
+2).  mpiifort -O2 var_global.f90 libsisso.f90 DI.f90 FC.f90 SISSO.f90 -o ~/bin/your_code_name
+  
+Note:
+- option 1) enables better accuracy and run-to-run reproducibility of floating-point calculations; option 2) makes 
+  it faster but tiny run-to-run variations may happen between processors of different types e.g. Intel and AMD. 
+  Thus, option 1) is recommended if accuracy and reproducibility are more focused than speed.
+- if 'mpi' related errors present during the compilation, please open the file 'var_global.f90' and replace
+  the line " use mpi " with " include 'mpif.h' ". However, " use mpi " is strongly encouraged  
+  ( https://www.mpi-forum.org/docs/mpi-3.1/mpi31-report/node411.htm).
 
 Modules in the code:
 - var_global.f90     global variables
