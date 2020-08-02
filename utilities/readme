@@ -17,29 +17,14 @@ Usage:
 2. Format of train.dat: column1,sample-string; column2,target-label(1/-1); column3-,components of the descriptor)
 3. Note: please check SVC.py and make changes wherever necessary for your application.
 
-
-- k-fold-cv: creating sub-dataset for k-fold cross validation with SISSO
-1. Set your cv parameters at line 9 in the file k-fold-cv.f90
-2. Compile the program: ifort k-fold-cv -o kfoldcv
-3. In the presence of the all-data train.dat file, run kfoldcv to generate cv training data in k folders
-4. Prepare a proper SISSO.in (take care the number of samples) and copy it to each of the cv folder
-5. Submit all the cv jobs by either using a script or do it manually
-6. Collect and analyze your cv results.
-
-
-- leave-percent-out cv: creating sub-dataset for leave-percent-out cross validation with SISSO
-1. Set your cv parameters at line 9 in the file leave-percent-out-cv.f90
-2. Do: ifort leave-percent-out-cv.f90 -o lpocv
-3. In the presence of the all-data train.dat file, run lpocv to generate cv training data in n folders
-4. Prepare a proper SISSO.in (take care the number of samples) and copy it to each of the folder
-5. Submit all the cv jobs by either using a script or do it manually
-6. Collect and analyze your cv results.
-
+- k-fold-cv (leave-percent-out-cv): creating sub-datasetS for cv with SISSO
+1. Set the parameter at line 12 in the file k-fold-cv.f90 (leave-percent-out-cv.f90)
+2. Compile the program: ifort k-fold-cv -o kfoldcv (ifort leave-percent-out-cv.f90 -o lpocv)
+3. With the all-data train.dat and corresponding SISSO.in in the working directory, run kfoldcv (lpocv) to generate k folders
+4. Sumbit the k SISSO jobs
+5. Collect and analyze your cv results from the k folders
 
 - Ionic_Radii
-The table of extended Shannon radii
-
-
-
+The table of extended Shannon radii (R. Ouyang, Chem. Mater. 32, 595 (2020).
 
 
