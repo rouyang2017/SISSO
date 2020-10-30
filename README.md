@@ -53,3 +53,10 @@ Created and maintained by Runhai Ouyang. Please feel free to open issues in the 
 (rouyang@shu.edu.cn) in case of any problems/comments/suggestions in using the code. 
 
 
+Other SISSO codes
+------------------
+MATLAB: https://github.com/NREL/SISSORegressor_MATLAB
+
+
+
+
