@@ -27,4 +27,7 @@ Usage:
 - Ionic_Radii
 The table of extended Shannon radii (R. Ouyang, Chem. Mater. 32, 595 (2020).
 
+- af2traindat.f90: Automatically creating the train.dat with atomic features for each compound.
+1. Prepare the two input files: atom_features (list of atomic features) and samplelist (list of samples). See templates in this folder for the format.
+2. Comiple and run the code af2traindat.f90
 
