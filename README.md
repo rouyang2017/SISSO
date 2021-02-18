@@ -55,7 +55,7 @@ Created and maintained by Runhai Ouyang. Please feel free to open issues in the 
 
 Other SISSO codes
 ------------------
-MATLAB: https://github.com/NREL/SISSORegressor_MATLAB
+MATLAB: https://github.com/NREL/SISSORegressor_MATLAB  
 Python interface: https://github.com/Matgenix/pysisso
 
 
