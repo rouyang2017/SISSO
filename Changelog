@@ -1,0 +1,90 @@
+v3.1
+-----
+1. New feature: Variable selection to enable SISSO to work with large
+train.dat, e.g. hundreds of primary features
+2. New feature: Sign-constrained multi-task learning
+3. The keyword 'rung' is redundant and removed, because the other keyword
+'maxcomplexity' (now renamed as fcomplexity) alone is sufficient to control the feature complexity and the
+feature-space size. In the code, the 'rung' is now automatically ajusted
+according to fcomplexity=0 for rung=0, fcomplexity=1 for rung=1,
+fcomplexity=2/3 for rung=2, and fcomplexity=4/5/6/7 for rung=3, and so forth.
+4. All system-calls have been replaced by intrinsic Fortran functions
+5. SISSO now accept the format of train.dat with space, comma, and tab separators.
+6. The value for the keyword 'dimclass' can be overwritten if a file called
+'pfdimension' is detected. The file 'pfdimension' enables flexible setting of
+the dimension (unit) matrix of the input primary features. See the format in the SISSO.out.
+
+
+
+v3.0.2
+------
+1. Bug fixed for "restart"
+2. Bug fixed for calculating domain-overlap in classification
+3. The recursive feature construction is made more flexible by allowing a
+different set of operators for each repeat. E.g. with rung=3, opset can be three sets of
+operators separated by comma: opset ='operators set1','operators set2','operators set3'. 
+If opset(1), opset(2),opset(3) are the same, then simply opset='operators set1'.
+4. The SIS-selected subspace size is made more flexible by
+allowing a different size for each dimension. E.g. with desc_dim=3, the
+subs_sis can be set to subs_sis=value1,value2,value3. If value1, value2 and
+value3 are the same, then simply subs_sis=value1.
+5. Tools added to 'utilities': k-fold-cv, leave-percent-out-cv, table of extended Shannon radii.
+
+
+v3.0
+----
+1. Added new parameters: fit_intercept, isconvex (see SISSO.in for introduction)
+2. Removed redundant parameters: ndimtype,fs_size_DI, fs_size_L0, calc
+3. Bugs fixed for the "residual" of classification
+4. The problem that when the generated total feature space is smaller than the
+value of subs_sis as specified in SISSO.in the code collapses is solved in this version 
+by automatically adjusting the parameter subs_sis to the actual total-space size.
+5. The corresponding coefficients of all the competing models given in the folder
+"models" are now available.
+
+
+v2.4
+----
+1. identification of 3D descriptor for classification enabled
+2. new folder 'utilities' added to include useful tools for analyzing the results
+3. input templates for multi-task learning added to the folder 'input_template'
+4. new keyword 'task_weighting' added for multi-task learning of continuous properties.
+5. keyword 'task' renamed to 'calc'
+6. keyword 'nprop' renamed to 'ntask'
+7. values for the keyword 'metric' renamed from 'LS_RMSE' and 'LS_MaxAE' to 'RMSE' and 'MaxAE', respectively.
+8. 'roundoff error' problem fixed. SISSO involves writing (FC steps) and reading (DI steps) of features during 
+the run. In all the previous version, the precision of the output features data were set to only 5 significant 
+figures, which is insufficient especially when features have large values, e.g. >10^5. Large roundoff error may 
+cause nonoptimal results. In this version, the precision of the output features data has been changed to 
+have 10 significant figures.
+
+v2.3
+----
+1. Improvements on classification
+Some top ranked yet poor descriptors are excluded. For example in the classification of two data group, 
+if one domain with rectangular shape intersects another domain also with rectangular shape, 
+then there is a non-zero overlap area but could be without data points inside the overlap region. 
+Such descriptors may be ranked at top positions because there may be no or very few data_in_overlap which is 
+used as the first metric for model ranking. These descriptors are not desired because of the actual big 
+overlap between domains. Now in the version 2.3, such descriptors are supressed.
+2. Compilation using GNU Fortran compilers enabled 
+The code compiled using Intel ifort was found ~1.5X faster than that using GNU gfortran at the same optimization 
+level -O2. Different compilers may lead to slightly different total feature spaces, e.g. due to numerical noise, 
+and the difference is basically on the unimportant features. Thus, the choice of compiler should make no changes 
+on the SISSO results (best models), as seen from my tests, yet for the reason of speed Intel compilers are recommended.
+
+
+v2.2
+----
+1. input template files are provided for both quantitative (regression) and qualitative (classification) properties
+2. DI is made faster (1~2X speed, especially when subs_sis is large)
+3. for nprop>1 (multi-task learning), the overall scores/errors of properties is calculated with quadratic mean
+4. Parallelization I/O bug fixed
+5. Input parameters CV_fold and CV_repeat removed
+
+
+v2.1
+----
+1. Parallelization I/O bug fixed
+2. Input parameters CV_fold and CV_repeat removed
+

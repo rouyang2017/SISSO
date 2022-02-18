@@ -1,0 +1,36 @@
+Usage of the tools:
+
+- SISSO_predict.f90: read descriptor formulas from SISSO.out, and make prediction on unknown materials.
+1. Installation: ifort SISSO_predict.f90 -o ~/bin SISSO_predict
+2. How to use: run the command 'SISSO_predict' at your working directory
+3. Input files: predict.dat (containing the test materials and features, same format with train.dat); 
+                parameters from SISSO_predict_para (see the provided template) or from input interactively.
+4. Output files: predict_X.out (descriptor coordinates of the test materials); 
+                 predict_Y.out (predicted values of the target property of the test materials).
+5. Note: please make sure that no 'operator' name is used for the feature names. E.g.: if one feature is named 'a', 
+   then 'abs()' will be mistakenly translated as xxxbs(), where xxx is the value of 'a'.
+
+
+- SVC.py: find the SVC hyperplane for classification with the descriptor from SISSO
+  run 'python SVC.py >out' at your working directory where the file train.dat exists.
+  please open the SVC.py and make changes wherever necessary for your application.
+
+- k-fold-cv & leave-percent-out-cv: creating sub-datasets for cv with SISSO
+1. Set the user input in the file k-fold-cv.f90 (leave-percent-out-cv.f90)
+2. Compile the program: ifort k-fold-cv -o kfoldcv (ifort leave-percent-out-cv.f90 -o lpocv)
+3. With the all-data train.dat and corresponding SISSO.in in the working directory, run kfoldcv (lpocv) to generate k folders
+4. Sumbit the k SISSO jobs
+5. Collect and analyze your cv results from the k folders
+
+- Ionic_Radii
+The table of extended Shannon radii (R. Ouyang, Chem. Mater. 32, 595 (2020).
+
+- af2traindat.f90: Automatically creating the train.dat with atomic features for each compound.
+1. Prepare the two input files: atom_features (list of atomic features) and samplelist (list of training samples). 
+   See the templates in this folder
+2. Comiple and run the code af2traindat.f90
+
+- VarSelect.py: Variable selection to enable SISSO to work with large train.dat, e.g. hundreds of primary features.
+See the usage instruction in the program.
+
+
