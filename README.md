@@ -12,7 +12,8 @@ Features:
 - Variables Selection for SISSO (see the program VarSelect.py in 'utilities')   
   Ref.: [Z. Guo et al., submitted]   
 - Sign-Constrained Multi-Task Learning    
-  Ref.: [J. Wang et al., in preparation]   
+  Ref.: [J. Wang et al., in preparation]  
+
 (Please refer to the Refs. and the SISSO.in template for more details in using these features)  
 
 
@@ -41,9 +42,9 @@ Running SISSO
 -------------
 Input Files: "SISSO.in" and "train.dat", whose templates can be found in 'input_template'.  
 Command-line usage:   
- SISSO > log  ! You may need to remove resource limit first by running the command 'ulimit -s unlimited'
+ SISSO > log  ! You may need to remove resource limit first by running the command 'ulimit -s unlimited'  
 Running on computer clusters, for example, using this command in your submission script:   
- mpirun -np number_of_cores SISSO >log
+ mpirun -np number_of_cores SISSO >log    
 
 Output: 
 - File "SISSO.out": overall information from feature construction to model building
