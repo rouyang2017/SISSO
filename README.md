@@ -40,7 +40,7 @@ Modules in the code:
 
 Running SISSO
 -------------
-Input Files: "SISSO.in" and "train.dat", whose templates can be found in 'input_template'.  
+Input Files: "SISSO.in" and "train.dat", whose templates can be found in 'input_templates'.  
 Command-line usage:   
  SISSO > log  ! You may need to remove resource limit first by running the command 'ulimit -s unlimited'  
 Running on computer clusters, for example, using this command in your submission script:   
@@ -52,7 +52,7 @@ Output:
 - Folder "feature_space": SIS-selected subspaces (feature data and formulas)
 - Folder "desc_dat": the data for the best descriptor/model
 - Folder "residual": residual data generated at each iteration
-- Files "convexnd_hull": the vertices of the nD convex hulls in classification
+- File "convexnd_hull": the vertices of the nD convex hulls in classification
 
 
 About
