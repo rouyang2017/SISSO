@@ -1,18 +1,18 @@
 v3.1
 -----
 1. New feature: Variable selection to enable SISSO to work with large
-train.dat, e.g. hundreds of primary features
+train.dat, e.g. with hundreds of primary features
 2. New feature: Sign-constrained multi-task learning
 3. The keyword 'rung' is redundant and removed, because the other keyword
 'maxcomplexity' (now renamed as fcomplexity) alone is sufficient to control the feature complexity and the
-feature-space size. In the code, the 'rung' is now automatically ajusted
+feature-space size. In the code, the 'rung' is now automatically adjusted
 according to fcomplexity=0 for rung=0, fcomplexity=1 for rung=1,
 fcomplexity=2/3 for rung=2, and fcomplexity=4/5/6/7 for rung=3, and so forth.
-4. All system-calls have been replaced by intrinsic Fortran functions
-5. SISSO now accept the format of train.dat with space, comma, and tab separators.
+4. All system-calls in the program have been replaced by intrinsic Fortran functions
+5. SISSO now accept the format of train.dat with space, comma, and tab as separators.
 6. The value for the keyword 'dimclass' can be overwritten if a file called
 'pfdimension' is detected. The file 'pfdimension' enables flexible setting of
-the dimension (unit) matrix of the input primary features. See the format in the SISSO.out.
+the dimension (unit) matrix of the input primary features. See the matrix format in the SISSO.out.
 
 
 
