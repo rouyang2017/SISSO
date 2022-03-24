@@ -212,7 +212,16 @@ if(fname(j:j)==' ' .or. fname(j:j)=='') cycle
 k=k+1
 string(k:k)=fname(j:j)
 end do
-fname=string
+
+i=index(fname,'exp(-')
+if(i>0) then
+  fname(:i+3)=string(:i+3)
+  fname(i+4:i+4)='0'
+  fname(i+5:)=string(i+4:)
+else
+  fname=string
+end if
+
 end subroutine
 
 subroutine string_split(instr,outstr,sp)
