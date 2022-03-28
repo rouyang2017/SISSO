@@ -154,7 +154,7 @@ if(lreject .and. mpirank==0) then
    rewind(funit)
    
    do j=1,nreject
-      read(funit,'(a)') line
+      read(funit,*) line
       call string_split(line,reject(j:j),' ')
       reject(j)=adjustl(reject(j))
    end do
