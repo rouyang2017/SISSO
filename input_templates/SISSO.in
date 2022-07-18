@@ -21,7 +21,7 @@ restart=0               !(R&C) 0: starts from scratch, 1: continues the job(see 
 !>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 nsf= 3                 !(R&C) Number of scalar features provided in the file train.dat
 opset='(+)(-)(*)(/)'   !(R&C) Please customize your operators from the list shown above.
-fcomplexity=3          !(R&C) Feature complexity (# of operators in the feature), integer from 0 to usually 7.
+fcomplexity=3          !(R&C) Maximal feature complexity (# of operators in the feature), integer from 0 to 7.
 dimclass=(1:2)(3:3)    !(R&C) (n1:n2): features from n1 to n2 arranged in train.dat have same dimension/unit
 maxfval_lb=1e-3        !(R&C) Treated as zero-feature if the max. abs. value of the feature < maxfval_lb.
 maxfval_ub=1e5         !(R&C) Treated as infinity-feature if the max. abs. value of the feature > maxfval_ub)
