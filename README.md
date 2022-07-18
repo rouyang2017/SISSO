@@ -7,14 +7,14 @@ R. Ouyang, S. Curtarolo, E. Ahmetcik, M. Scheffler, and L. M. Ghiringhelli, Phys
 Features:   
 - Regression & Classification    
   Ref.: [R. Ouyang et al., Phys. Rev. Mater. 2, 083802 (2018)]   
-- Multi-Task Learning    
+- Multi-Task Learning (MT-SISSO)    
   Ref.: [R. Ouyang et al., J. Phys.: Mater. 2, 024002 (2019)]   
-- Variables Selection for SISSO (see the program VarSelect.py in 'utilities')   
-  Ref.: [Z. Guo et al., submitted]   
-- Sign-Constrained Multi-Task Learning    
+- Variables Selection assisted Symbolic Regression (VS-SISSO, see the VarSelect.py in 'utilities')   
+  Ref.: [Z. Guo et al., J. Chem. Theory Comput. 2022, https://doi.org/10.1021/acs.jctc.2c00281]   
+- Sign-Constrained Multi-Task Learning (SCMT-SISSO)    
   Ref.: [J. Wang et al., in preparation]  
 
-(Please refer to the Refs. and the SISSO.in template for more details in using these features)  
+(Please refer to the Refs. and the SISSO.in template for more details in using the code)  
 
 
 Installation
