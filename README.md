@@ -71,6 +71,6 @@ Other SISSO-related codes
 -------------------------
 MATLAB: https://github.com/NREL/SISSORegressor_MATLAB  
 Python interface: https://github.com/Matgenix/pysisso  
-SISO++: https://gitlab.com/sissopp_developers/sissopp
+SISSO++: https://gitlab.com/sissopp_developers/sissopp
 
 
