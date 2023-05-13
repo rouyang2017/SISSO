@@ -13,7 +13,7 @@ Features
 - Variables Selection assisted Symbolic Regression (VS-SISSO, see the VarSelect.py in 'utilities')   
   Ref.: [Z. Guo et al., J. Chem. Theory Comput. 18, 4945 (2022).]
 - Sign-Constrained Multi-Task Learning (SCMT-SISSO)    
-  Ref.: [J. Wang et al., https://arxiv.org/abs/2301.06884]  
+  Ref.: [J. Wang et al., J. Am. Chem. Soc. https://doi.org/10.1021/jacs.3c03493]  
 
 (Please refer to the Refs. and the SISSO_guide.pdf for more details in using the code)  
 
