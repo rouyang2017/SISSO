@@ -21,8 +21,8 @@ Features
 Installation
 ------------
 A Fortran mpi compiler is required to compile the SISSO parallel program. Below are two options for compiling the program using an IntelMPI compiler (other compilers may work as well). In the folder 'src', do:    
-(1)  mpiifort -fp-model precise var_global.f90 libsisso.f90 DI.f90 FC.f90 SISSO.f90 -o ~/bin/SISSO 
-(2)  mpiifort -O2 var_global.f90 libsisso.f90 DI.f90 FC.f90 SISSO.f90 -o ~/bin/SISSO
+(1)  mpiifort -fp-model precise var_global.f90 libsisso.f90 DI.f90 FC.f90 SISSO.f90 -o ~/bin/SISSO    
+or (2)  mpiifort -O2 var_global.f90 libsisso.f90 DI.f90 FC.f90 SISSO.f90 -o ~/bin/SISSO
   
 Note:
 - option (1) enables better accuracy and run-to-run reproducibility of floating-point calculations; (2) is ~ 2X faster 
