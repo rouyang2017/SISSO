@@ -71,7 +71,7 @@ Created and maintained by Runhai Ouyang. Please feel free to open issues in the 
 
 Other SISSO-related codes
 -------------------------
-SISSO++: https://gitlab.com/sissopp_developers/sissopp
+SISSO++: https://gitlab.com/sissopp_developers/sissopp    
 MATLAB: https://github.com/NREL/SISSORegressor_MATLAB  
 Python interface: https://github.com/Matgenix/pysisso  
 
