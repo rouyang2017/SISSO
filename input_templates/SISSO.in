@@ -18,7 +18,7 @@ restart=0               !(R&C) 0: starts from scratch, 1: continues the job(prog
 ! Implemented operators:(+)(-)(*)(/)(exp)(exp-)(^-1)(^2)(^3)(sqrt)(cbrt)(log)(|-|)(scd)(^6)(sin)(cos)
 ! scd: standard Cauchy distribution
 !>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-nsf= 5                 !(R&C) Number of scalar features provided in the file train.dat
+nsf= 3                 !(R&C) Number of scalar features provided in the file train.dat
 ops='(+)(-)(*)(/)'     !(R&C) Please customize the operators from the list shown above.
 fcomplexity=3          !(R&C) Maximal feature complexity (# of operators in a feature), integer from 0 to 7.
 funit=(1:2)(5:5)       !(R&C) Each bracket defines one unit for feat. from n1 to n2 in train.dat. 
