@@ -52,8 +52,7 @@ Note that the input templates may be different from version to version. Thus, it
 Command-line usage:   
  SISSO > log  ! You may need to remove resource limit first by running the command 'ulimit -s unlimited'  
 Runnig on clusters:     
-Put command in your submission script, e.g.:   
- mpirun -np number_of_cores SISSO >log    
+Put command in your submission script, e.g.: mpirun -np number_of_cores SISSO >log    
 
 Primary Output Files: 
 - File "SISSO.out": overall information from feature construction to model building
