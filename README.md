@@ -56,7 +56,7 @@ Put command in your submission script, e.g.: mpirun -np number_of_cores SISSO >l
 
 Primary Output Files: 
 - File "SISSO.out": overall information from feature construction to model building
-- Folder "Models": list of the top ranked models, and the data for the top-1 model
+- Folder "Models": list of the top ranked models, and the data for the top-1 model (the one shown in SISSO.out)
 - Folder "SIS_subspaces": SIS-selected subspaces (feature data and expressions)
 
 
