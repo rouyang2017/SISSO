@@ -1,0 +1,24 @@
+The current version of SISSO requires the ifort command from the Intel Fortran Compiler Classic for compilation. However, this version is no longer supported by Intel, and following the original installation guide will result in errors. The updated installation instructions are provided below.
+
+1. Prepare the intel fortran compiler classic environment:
+
+2. Download and install the Intel MPI Library version 2021.15.0.
+https://www.intel.com/content/www/us/en/developer/tools/oneapi/mpi-library-download.html?operatingsystem=linux&distribution-linux=offline
+
+3. Download the Intel Fortran Compiler Classic version 2021.2.0, which is not available on the Intel website anymore. You can download it from the following link.
+(I haven't tried other versions, but this one works for me.)
+https://registrationcenter-download.intel.com/akdlm/IRC_NAS/17756/l_fortran-compiler_p_2021.2.0.136_offline.sh
+
+4. Xterm (GUI) is needed to install the Intel Fortran Compiler Classic.
+Please follow the instructions on the Internet to install Xterm.
+If you are using a headless server, you can use remote desktop GUI (for example, xfce + VNC) to access GUI.
+
+5. Login the server using GUI.
+
+6. Install the Intel Fortran Compiler Classic:
+$ bash l_fortran-compiler_p_2021.2.0.136_offline.sh
+
+7. Set the environment variables:
+$ source /opt/intel/oneapi/setvars.sh
+
+You should now be able to run ifort and mpiifort commands in the terminal, go ahead and compile SISSO!
