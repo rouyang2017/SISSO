@@ -3,7 +3,7 @@ The current version of SISSO requires the ifort command from the Intel Fortran C
 1. Prepare the intel fortran compiler classic environment:
 
 2. Download and install the Intel MPI Library version 2021.15.0.
-https://www.intel.com/content/www/us/en/developer/tools/oneapi/mpi-library-download.html?operatingsystem=linux&distribution-linux=offline
+https://registrationcenter-download.intel.com/akdlm/IRC_NAS/6b6e395e-8f38-4da3-913d-90a2bcf41028/intel-mpi-2021.15.0.495_offline.sh
 
 3. Download the Intel Fortran Compiler Classic version 2021.2.0, which is not available on the Intel website anymore. You can download it from the following link.
 (I haven't tried other versions, but this one works for me.)
